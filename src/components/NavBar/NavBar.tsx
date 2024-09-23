@@ -32,10 +32,10 @@ export const NavBar = () => {
     setIsDropDownOpen((prevState) => !prevState);
   }, [isDropDownOpen]);
 
-  const handleDropDownItemClick = (sectionId: string) => {
+  const handleDropDownItemClick = useCallback((sectionId: string) => {
     handleMenuClick();
     window.location.href = sectionId;
-  };
+  }, [handleMenuClick]);
 
   const handleContactClick = useCallback(() => {
     window.location.href = '#contact';

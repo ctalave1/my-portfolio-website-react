@@ -1,12 +1,12 @@
 import './App.css';
 
 import { NavBar } from './components/NavBar/NavBar';
-import { Home } from './components/Home';
-import { About } from './components/About';
-import { Skills } from './components/Skills';
-import { Projects } from './components/Projects';
-import { Contact } from './components/Contact';
-import { Footer } from './components/Footer';
+import { Home } from './sections/Home';
+import { About } from './sections/About';
+import { Skills } from './sections/Skills';
+import { Projects } from './sections/Projects';
+import { Contact } from './sections/Contact';
+import { Footer } from './sections/Footer';
 
 const App = () => {
   return (
