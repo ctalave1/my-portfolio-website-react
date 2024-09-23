@@ -1,8 +1,10 @@
- import { FaEnvelope, FaPhone, FaMapLocation } from 'react-icons/fa6';
+import { FaEnvelope, FaPhone, FaMapLocation } from 'react-icons/fa6';
+
+import { Button } from '../../components/Button';
 
 export const Contact = () => {
   return (
-    <div className="text-white pt-20 pb-10" id="contact">
+    <div className="text-white py-20" id="contact">
       <div className="container mx-auto px-8 md:px-16 lg:px-24">
         <h2 className="text-4xl font-bold text-center mb-12">
           Contact Me
@@ -55,25 +57,11 @@ export const Contact = () => {
                   placeholder="Enter your message"
                 />
               </div>
-              <button
-                className="
-                  bg-gradient-to-r 
-                  from-yellow-400 
-                  to-blue-600 
-                  text-white 
-                  hidden 
-                  md:inline 
-                  transform 
-                  transition-transform
-                  duration-300 
-                  hover:scale-105 
-                  px-8 
-                  py-2 
-                  rounded-full
-                "
-              >
-                Send
-              </button>
+              <Button
+                text="Send"
+                px={8}
+                py={2}
+              />
             </form>
           </div>
         </div>

@@ -1,6 +1,10 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import { FaBars } from "react-icons/fa6";
 
+import { Button } from "../Button";
+import { NavBarDropDown } from "./components/NavBarDropDown";
+import { NavBarContext } from "./contexts/NavBarContext";
+
 const listenForOutsideClicks = (listening, setListening, menuRef, setIsOpen) => {
   return () => {
     if (listening) return;
@@ -52,26 +56,12 @@ export const NavBar = () => {
           <a href="#projects" className="hover:text-gray-400 hidden md:inline">Projects</a>
           <a href="#contact" className="hover:text-gray-400 hidden md:inline">Contact</a>
         </div>
-        <button
-          className="
-            bg-gradient-to-r 
-            from-yellow-400 
-            to-blue-600 
-            text-white 
-            hidden 
-            md:inline 
-            transform 
-            transition-transform
-            duration-300 
-            hover:scale-105 
-            px-4 
-            py-2 
-            rounded-full
-          "
+        <Button
+          text="Contact Me"
+          px={4}
+          py={2}
           onClick={handleContactClick}
-        >
-          Contact Me
-        </button>
+        />
         <div className="md:hidden">
           <button onClick={handleMenuClick}>
             <FaBars className="transform transition-transform duration-300 hover:rotate-180"/>
@@ -79,25 +69,9 @@ export const NavBar = () => {
         </div>
       </div>
       {isDropDownOpen && (
-        <div className="z-50 bg-black py-1 md:hidden">
-          <ul className="container flex flex-col">
-            <li onClick={() => handleDropDownItemClick('#home')} className="py-1 w-full text-center">
-              <div className="hover:text-gray-400 md:hidden">Home</div>
-            </li>
-            <li onClick={() => handleDropDownItemClick('#about')} className="py-1 w-full text-center">
-              <div className="hover:text-gray-400 md:hidden">About Me</div>
-            </li>
-            <li onClick={() => handleDropDownItemClick('#skills')} className="py-1 w-full text-center">
-              <div className="hover:text-gray-400 md:hidden">Skills</div>
-            </li>
-            <li onClick={() => handleDropDownItemClick('#projects')} className="py-1 w-full text-center">
-              <div className="hover:text-gray-400 md:hidden">Projects</div>
-            </li>
-            <li onClick={() => handleDropDownItemClick('#contact')} className="py-1 w-full text-center">
-              <div className="hover:text-gray-400 md:hidden">Contact</div>
-            </li>
-          </ul>
-        </div>
+        <NavBarContext.Provider value={handleDropDownItemClick} >
+          <NavBarDropDown />
+        </NavBarContext.Provider>
       )}
     </nav>
   );

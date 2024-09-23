@@ -1,4 +1,5 @@
 import AboutImage from '../../assets/images/profile.jpeg';
+import { ProgressBar } from '../../components/ProgressBar';
 
 export const About = () => {
   return (
@@ -23,30 +24,30 @@ export const About = () => {
                 <label htmlFor="htmlandcss" className="w-2/12">
                   HTML & CSS
                 </label>
-                <div className="grow bg-gray-800 rounded-full h-2.5">
-                  <div className="bg-gradient-to-r from-yellow-400 to-blue-600 h-2.5 rounded-full transform transition-transform duration-300 hover:scale-105 w-10/12">
-                  </div>
-                </div>
+                <ProgressBar
+                  id="htmlandcss"
+                  progress={10/12}
+                />
               </div>
 
               <div className="flex items-center">
                 <label htmlFor="nodejs" className="w-2/12">
                   Node.js
                 </label>
-                <div className="grow bg-gray-800 rounded-full h-2.5">
-                  <div className="bg-gradient-to-r from-yellow-400 to-blue-600 h-2.5 rounded-full transform transition-transform duration-300 hover:scale-105 w-9/12">
-                  </div>
-                </div>
+                <ProgressBar 
+                  id="nodejs"
+                  progress={9/12}
+                />
               </div>
 
               <div className="flex items-center">
                 <label htmlFor="react" className="w-2/12">
                   React
                 </label>
-                <div className="grow bg-gray-800 rounded-full h-2.5">
-                  <div className="bg-gradient-to-r from-yellow-400 to-blue-600 h-2.5 rounded-full transform transition-transform duration-300 hover:scale-105 w-11/12">
-                  </div>
-                </div>
+                <ProgressBar
+                  id="react"
+                  progress={11/12}
+                />
               </div>
             </div>
 
@@ -59,16 +60,16 @@ export const About = () => {
               </div>
               <div>
                 <h3 className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-blue-600">
-                  10+
+                  X
                 </h3>
                 <p>Projects Completed</p>
               </div>
 
               <div>
                 <h3 className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-blue-600">
-                  10+
+                  Y
                 </h3>
-                <p>Happy Clients</p>
+                <p>Happy Employers</p>
               </div>
             </div>
           </div>

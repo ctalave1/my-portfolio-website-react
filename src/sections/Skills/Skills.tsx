@@ -1,4 +1,6 @@
-import { useMemo } from "react";
+import { useMemo } from 'react';
+
+import { Card } from '../../components/Card';
 
 export const Skills = () => {
   const services = useMemo(() => [
@@ -27,10 +29,7 @@ export const Skills = () => {
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map(service => (
-            <div 
-              key={service.id}
-              className="bg-gray-800 px-6 pb-6 rounded-lg hover:shadow-lg transform transition-transform-300 hover:scale-105"
-            >
+            <Card key={service.id}>
               <div className="text-left text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-b from-yellow-400 to-blue-400">
                 {service.id}
               </div>
@@ -40,7 +39,7 @@ export const Skills = () => {
               <p className="mt-2 text-gray-300">
                 {service.description}
               </p>
-            </div>
+            </Card>
           ))}
         </div>
       </div>
