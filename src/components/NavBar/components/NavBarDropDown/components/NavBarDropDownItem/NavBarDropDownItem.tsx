@@ -12,7 +12,7 @@ export const NavBarDropDownItem = ({ text, sectionId }: NavBarDropDownItemProps)
 
   return (
     <li onClick={() => handleDropDownItemClick(sectionId)} className="py-1 w-full text-center">
-      <div className="hover:text-gray-400 md:hidden">{text}</div>
+      <div className="hover:text-gray-400 lg:hidden">{text}</div>
     </li>
   );
 };

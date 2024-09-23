@@ -1,26 +1,26 @@
+import { useContext } from "react";
+import { ThemeContext } from "../../contexts/ThemeContext";
+
 type ButtonProps = {
   text: string;
-  px: number;
-  py: number;
+  twClasses?: Array<string>
   onClick?: () => void;
 }
 
-export const Button = ({ text, px, py, onClick = () => {} }: ButtonProps) => {
+export const Button = ({ text, twClasses, onClick }: ButtonProps) => {
+  const theme = useContext(ThemeContext);
+
   return (
     <button
       className={`
+        ${twClasses ? twClasses.join(' ') : ''}
         bg-gradient-to-r 
-        from-yellow-400 
-        to-blue-600 
+        ${theme.gradientColors}
         text-white 
-        hidden 
-        md:inline 
         transform 
         transition-transform
         duration-300 
         hover:scale-105 
-        px-${px} 
-        py-${py} 
         rounded-full
       `}
       onClick={onClick}

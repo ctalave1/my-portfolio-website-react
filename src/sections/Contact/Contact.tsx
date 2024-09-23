@@ -1,8 +1,13 @@
+import { useContext } from 'react';
 import { FaEnvelope, FaPhone, FaMapLocation } from 'react-icons/fa6';
 
 import { Button } from '../../components/Button';
 
+import { ThemeContext } from '../../contexts/ThemeContext';
+
 export const Contact = () => {
+  const theme = useContext(ThemeContext);
+
   return (
     <div className="text-white py-20" id="contact">
       <div className="container mx-auto px-8 md:px-16 lg:px-24">
@@ -11,20 +16,20 @@ export const Contact = () => {
         </h2>
         <div className="flex flex-col md:flex-row items-center md:space-x-12">
           <div className="flex-1">
-            <h3 className='text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-blue-600 mb-4'>Let's Talk</h3>
+            <h3 className={`text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r ${theme.gradientColors}`}>Let's Talk</h3>
             <p>I'm open to discussing web development projects or professional opportunities.</p>
             <div className="mb-4 mt-8">
-              <FaEnvelope className="inline-block text-yellow-400 mr-2" />
+              <FaEnvelope className={`inline-block ${theme.iconColorPrimary} mr-2`} />
               <a href="mailto:talavera.christopher@yahoo.com" className="hover:underline">
                 talavera.christopher@yahoo.com
               </a>
             </div>
             <div className="mb-4">
-              <FaPhone className="inline-block text-yellow-400 mr-2" />
+              <FaPhone className={`inline-block ${theme.iconColorPrimary} mr-2`} />
               +19546704157
             </div>
             <div className="mb-4">
-              <FaMapLocation className="inline-block text-yellow-400 mr-2" />
+              <FaMapLocation className={`inline-block ${theme.iconColorPrimary} mr-2`} />
               <span>1945 SW 15th St #57, Deerfield Beach, FL, USA</span>
             </div>
           </div>
@@ -35,7 +40,7 @@ export const Contact = () => {
                 <input
                   id="name"
                   type="text"
-                  className="w-full p-2 rounded bg-gray-800 border border-gray-600 focus:outline-none focus:border-yellow-400"
+                  className={`w-full p-2 rounded ${theme.inputBgColor} border ${theme.inputBorderColor} focus:outline-none focus:border-yellow-400`}
                   placeholder="Enter your name"
                 />
               </div>
@@ -44,7 +49,7 @@ export const Contact = () => {
                 <input
                   id="email"
                   type="email"
-                  className="w-full p-2 rounded bg-gray-800 border border-gray-600 focus:outline-none focus:border-yellow-400"
+                  className={`w-full p-2 rounded ${theme.inputBgColor} border ${theme.inputBorderColor} focus:outline-none focus:border-yellow-400`}
                   placeholder="Enter your email"
                 />
               </div>
@@ -53,14 +58,13 @@ export const Contact = () => {
                 <textarea
                   id="message"
                   rows={5} 
-                  className="w-full p-2 rounded bg-gray-800 border border-gray-600 focus:outline-none focus:border-yellow-400"
+                  className={`w-full p-2 rounded ${theme.inputBgColor} border ${theme.inputBorderColor} focus:outline-none focus:border-yellow-400`}
                   placeholder="Enter your message"
                 />
               </div>
               <Button
                 text="Send"
-                px={8}
-                py={2}
+                twClasses={['px-8', 'py-2']}
               />
             </form>
           </div>

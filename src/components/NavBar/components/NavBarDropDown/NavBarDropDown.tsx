@@ -2,7 +2,7 @@ import { NavBarDropDownItem } from './components/NavBarDropDownItem';
 
 export const NavBarDropDown = () => {
   return (
-    <div className="z-50 bg-black py-1 md:hidden">
+    <div className="z-50 bg-black py-1 lg:hidden">
       <ul className="container flex flex-col">
         <NavBarDropDownItem 
           text="Home"

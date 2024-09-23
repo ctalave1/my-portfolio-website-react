@@ -32,7 +32,6 @@ export const NavBar = () => {
   ), [listening, setListening, navRef, setIsDropDownOpen]);
 
   const handleMenuClick = useCallback(() => {
-    console.log(isDropDownOpen);
     setIsDropDownOpen((prevState) => !prevState);
   }, [isDropDownOpen]);
 
@@ -50,19 +49,18 @@ export const NavBar = () => {
       <div className="container py-2 flex justify-between items-center">
         <div className="text-xl font-bold md:inline">C<span className="hidden md:inline">hristopher{" "}</span>T<span className="hidden md:inline">alavera</span></div>
         <div className="space-x-6">
-          <a href="#home" className="hover:text-gray-400 hidden md:inline">Home</a>
-          <a href="#about" className="hover:text-gray-400 hidden md:inline">About Me</a>
-          <a href="#skills" className="hover:text-gray-400 hidden md:inline">Skills</a>
-          <a href="#projects" className="hover:text-gray-400 hidden md:inline">Projects</a>
-          <a href="#contact" className="hover:text-gray-400 hidden md:inline">Contact</a>
+          <a href="#home" className="hover:text-gray-400 hidden lg:inline">Home</a>
+          <a href="#about" className="hover:text-gray-400 hidden lg:inline">About Me</a>
+          <a href="#skills" className="hover:text-gray-400 hidden lg:inline">Skills</a>
+          <a href="#projects" className="hover:text-gray-400 hidden lg:inline">Projects</a>
+          <a href="#contact" className="hover:text-gray-400 hidden lg:inline">Contact</a>
         </div>
         <Button
           text="Contact Me"
-          px={4}
-          py={2}
+          twClasses={['px-4', 'py-2', 'hidden', 'lg:inline']}
           onClick={handleContactClick}
         />
-        <div className="md:hidden">
+        <div className="lg:hidden">
           <button onClick={handleMenuClick}>
             <FaBars className="transform transition-transform duration-300 hover:rotate-180"/>
           </button>

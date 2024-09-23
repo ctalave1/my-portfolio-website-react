@@ -1,6 +1,6 @@
 import './App.css';
 
-import { GradientColorsContext } from './contexts/GradientColorsContext';
+import { ThemeContext, theme } from './contexts/ThemeContext';
 
 import { NavBar } from './components/NavBar/NavBar';
 import { Home } from './sections/Home';
@@ -13,7 +13,7 @@ import { Background } from './components/Background';
 
 const App = () => {
   return (
-    <GradientColorsContext.Provider value="from-yellow-400 to-blue-600">
+    <ThemeContext.Provider value={theme}>
       <NavBar />
       <div className="relative w-full h-full">
         <div className="relative z-10">
@@ -26,7 +26,7 @@ const App = () => {
         </div>
         <Background />
       </div>
-    </GradientColorsContext.Provider>
+    </ThemeContext.Provider>
   );
 }
 

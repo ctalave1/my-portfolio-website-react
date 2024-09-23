@@ -1,4 +1,5 @@
-import { useMemo } from "react";
+import { useMemo, useContext } from "react";
+import { ThemeContext } from "../../contexts/ThemeContext";
 
 type ProgressBarProps = {
   id: string;
@@ -6,14 +7,16 @@ type ProgressBarProps = {
 };
 
 export const ProgressBar = ({ id, progress }: ProgressBarProps) => {
-  const progressPercentage: number = useMemo(() => {
+  const theme = useContext(ThemeContext);
+
+  const progressPercentage: { width: string } = useMemo(() => {
     const percentage = Math.floor(progress * 100);
-    return percentage;
+    return { width: `${percentage}%` };
   }, [progress]);
 
   return (
-    <div id={id} className="grow bg-gray-800 rounded-full h-2.5">
-      <div className={`bg-gradient-to-r from-yellow-400 to-blue-600 h-2.5 rounded-full transform transition-transform duration-300 hover:scale-105 w-[${progressPercentage}%]`}>
+    <div id={id} className="grow bg-gray-800 rounded-full h-2.5 ml-3">
+      <div style={progressPercentage} className={`bg-gradient-to-r ${theme.gradientColors} h-2.5 rounded-full transform transition-transform duration-300 hover:scale-105`}>
       </div>
     </div>
   );
