@@ -10,6 +10,7 @@ import { Projects } from './sections/Projects';
 import { Contact } from './sections/Contact';
 import { Footer } from './sections/Footer';
 import { Background } from './components/Background';
+import { Experience } from './sections/Experience';
 
 const App = () => {
   return (
@@ -19,6 +20,7 @@ const App = () => {
         <div className="relative z-10">
           <Home />
           <About />
+          <Experience />
           <Skills />
           <Projects />
           <Contact />

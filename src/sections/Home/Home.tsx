@@ -1,4 +1,5 @@
 import { useCallback, useContext } from 'react';
+import axios from 'axios';
 
 import { ThemeContext } from '../../contexts/ThemeContext';
 
@@ -7,11 +8,17 @@ import Profile from '../../assets/images/profile.jpeg';
 import { Button } from '../../components/Button';
 import { Section } from '../../components/Section';
 
+import { getResume } from '../../services/ResumeService';
+
 export const Home = () => {
   const theme = useContext(ThemeContext);
 
-  const handleResumeClick = useCallback(() => {
-    // window.open('../../assets/resume.pdf');
+  const handleResumeClick = useCallback(async () => {
+    try {
+      await getResume();
+    } catch (e) {
+      console.error(e);
+    }
   }, []);
 
   return (
@@ -39,7 +46,7 @@ export const Home = () => {
           <span className={`text-transparent bg-clip-text bg-gradient-to-r ${theme.gradientColors}`}>Christopher Talavera</span> {" "}
         </h1>
         <h2 className="text-2xl font-bold">
-          Full-Stack Developer
+          Senior Full-Stack Developer
         </h2>
         <p className="mt-4 text-lg text-gray-300 px-4 md:px-32">
           I specialize in building modern and responsive web applications.

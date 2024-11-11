@@ -15,7 +15,7 @@ export const ProgressBar = ({ id, progress }: ProgressBarProps) => {
   }, [progress]);
 
   return (
-    <div id={id} className="grow bg-gray-800 rounded-full h-2.5 ml-3">
+    <div id={id} className="grow bg-gray-300 rounded-full h-2.5 ml-3">
       <div style={progressPercentage} className={`bg-gradient-to-r ${theme.gradientColors} h-2.5 rounded-full transform transition-transform duration-300 hover:scale-105`}>
       </div>
     </div>

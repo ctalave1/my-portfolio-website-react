@@ -30,7 +30,7 @@ export const Contact = () => {
             </div>
             <div className="mb-4">
               <FaMapLocation className={`inline-block ${theme.iconColorPrimary} mr-2`} />
-              <span>1945 SW 15th St #57, Deerfield Beach, FL, USA</span>
+              <span>Charlotte, North Carolina</span>
             </div>
           </div>
           <div className="flex-1 w-full">
