@@ -3,18 +3,12 @@ import { useMemo, useContext } from 'react';
 import {
   FaHtml5,
   FaCss3Alt,
-  FaVuejs,
-  FaAngular,
   FaReact,
   FaAws,
-  FaJava,
   FaNodeJs
 } from "react-icons/fa6";
 import {
-  SiCsharp,
-  SiRubyonrails,
   SiPostgresql,
-  SiMicrosoftsqlserver,
   SiTypescript
 } from "react-icons/si";
 
@@ -34,21 +28,21 @@ export const Skills = () => {
       technologies: [
         {
           id: 1,
-          label: <FaHtml5 />,
+          label: <FaHtml5 size={28} />,
           title: 'HTML',
           htmlId: 'html',
           progress: 3.5/5
         },
         {
           id: 2,
-          label: <FaCss3Alt />,
+          label: <FaCss3Alt size={28}  />,
           title: 'CSS',
           htmlId: 'css',
           progress: 3.5/5
         },
         {
           id: 3,
-          label: <FaReact />,
+          label: <FaReact size={28}  />,
           title: 'React',
           htmlId: 'react',
           progress: 4/5
@@ -62,21 +56,21 @@ export const Skills = () => {
       technologies: [
         {
           id: 1,
-          label: <FaNodeJs />,
+          label: <FaNodeJs size={28} />,
           title: 'Node.js',
           htmlId: 'nodejs',
           progress: 5/5
         },
         {
           id: 2,
-          label: <SiPostgresql />,
+          label: <SiPostgresql size={28} />,
           title: 'PostgreSQL',
           htmlId: 'postgresql',
           progress: 4/5
         },
         {
           id: 3,
-          label: <FaAws />,
+          label: <FaAws size={28} />,
           title: 'Amazon Web Services',
           htmlId: 'aws',
           progress: 5/5
@@ -90,21 +84,21 @@ export const Skills = () => {
       technologies: [
         {
           id: 1,
-          label: <strong>FE</strong>,
+          label: <strong className="text-xl">FE</strong>,
           title: 'Frontend',
           htmlId: 'frontend',
           progress: 3.7/5
         },
         {
           id: 2,
-          label: <strong>BE</strong>,
+          label: <strong className="text-xl">BE</strong>,
           title: 'Backend',
           htmlId: 'backend',
           progress: 4.6/5
         },
         {
           id: 3,
-          label: <SiTypescript />,
+          label: <SiTypescript size={28} />,
           title: 'TypeScript',
           htmlId: 'typescript',
           progress: 4/5

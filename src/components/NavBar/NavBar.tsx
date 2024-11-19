@@ -1,18 +1,18 @@
-import { useCallback, useEffect, useRef, useState } from "react";
+import { MutableRefObject, SetStateAction, useCallback, useEffect, useRef, useState } from "react";
 import { FaBars } from "react-icons/fa6";
 
 import { Button } from "../Button";
 import { NavBarDropDown } from "./components/NavBarDropDown";
 import { NavBarContext } from "./contexts/NavBarContext";
 
-const listenForOutsideClicks = (listening, setListening, menuRef, setIsOpen) => {
+const listenForOutsideClicks = (listening: boolean, setListening: { (value: SetStateAction<boolean>): void; (arg0: boolean): void; }, menuRef: MutableRefObject<HTMLElement>, setIsOpen: { (value: SetStateAction<boolean>): void; (arg0: boolean): void; }) => {
   return () => {
     if (listening) return;
     if (!menuRef.current) return;
     setListening(true);
     [`click`, `touchstart`].forEach(() => {
       document.addEventListener(`click`, (evt) => {
-        if (menuRef.current.contains(evt.target)) return;
+        if (menuRef.current.contains(evt.target as Node)) return;
         setIsOpen(false);
       });
     });
@@ -20,10 +20,11 @@ const listenForOutsideClicks = (listening, setListening, menuRef, setIsOpen) => 
 };
 
 export const NavBar = () => {
-  const navRef = useRef(null);
+  const navRef = useRef(document.createElement('nav'));
   const [listening, setListening] = useState(false);
   const [isDropDownOpen, setIsDropDownOpen] = useState(false);
 
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(listenForOutsideClicks(
       listening,
       setListening,
@@ -33,7 +34,7 @@ export const NavBar = () => {
 
   const handleMenuClick = useCallback(() => {
     setIsDropDownOpen((prevState) => !prevState);
-  }, [isDropDownOpen]);
+  }, [setIsDropDownOpen]);
 
   const handleDropDownItemClick = useCallback((sectionId: string) => {
     handleMenuClick();

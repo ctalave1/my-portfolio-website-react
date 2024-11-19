@@ -1,5 +1,4 @@
 import { useCallback, useContext } from 'react';
-import axios from 'axios';
 
 import { ThemeContext } from '../../contexts/ThemeContext';
 

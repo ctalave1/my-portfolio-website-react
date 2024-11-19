@@ -2,33 +2,11 @@ import { useContext } from 'react';
 
 import AboutImage from '../../assets/images/about.jpg';
 
-// import { ProgressBar } from '../../components/ProgressBar';
 import { ThemeContext } from '../../contexts/ThemeContext';
 import { Section } from '../../components/Section';
 
 export const About = () => {
   const theme = useContext(ThemeContext);
-
-  // const technologies = useMemo(() => [
-  //   {
-  //     id: 1,
-  //     name: 'HTML & CSS',
-  //     htmlId: 'htmlandcss',
-  //     progress: 2.5/5
-  //   },
-  //   {
-  //     id: 2,
-  //     name: 'Node.js',
-  //     htmlId: 'nodejs',
-  //     progress: 2.5/5
-  //   },
-  //   {
-  //     id: 3,
-  //     name: 'React',
-  //     htmlId: 'react',
-  //     progress: 2.5/5
-  //   },
-  // ], []);
 
   return (
     <Section
@@ -69,20 +47,6 @@ export const About = () => {
             I want to be able to help make the lives of other people easier through my contributions, be they small or big, to the field of software development.
           </p>
 
-          {/* <div className="space-y-4">
-            {technologies.map(technology => (
-              <div key={technology.id} className="flex items-center">
-                <label htmlFor={technology.htmlId} className="w-2/12">
-                  {technology.name}
-                </label>
-                <ProgressBar
-                  id={technology.htmlId}
-                  progress={technology.progress}
-                />
-              </div>
-            ))}
-          </div> */}
-
           <div className="mt-4 flex justify-between text-center">
             <div>
               <h3 className={`text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-b ${theme.gradientColors}`}>
@@ -92,7 +56,7 @@ export const About = () => {
             </div>
             <div>
               <h3 className={`text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-b ${theme.gradientColors}`}>
-                10
+                7
               </h3>
               <p>Projects Completed or Contributed To</p>
             </div>

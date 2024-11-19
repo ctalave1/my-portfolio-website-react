@@ -30,6 +30,6 @@ const App = () => {
       </div>
     </ThemeContext.Provider>
   );
-}
+};
 
-export default App
+export default App;

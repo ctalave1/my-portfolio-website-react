@@ -14,4 +14,4 @@ export const theme: ThemeType = {
   inputBorderColor: "border-gray-600"
 };
 
-export const ThemeContext = createContext(theme);
+export const ThemeContext = createContext<ThemeType>(theme);

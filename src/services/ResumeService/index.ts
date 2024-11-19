@@ -10,8 +10,6 @@ export const getResume = async (): Promise<void> => {
 
     const downloadUrl: string = window.URL.createObjectURL(resp.data);
 
-    console.log(typeof resp.data);
-
     window.open(downloadUrl, '_blank');
 
     window.URL.revokeObjectURL(downloadUrl);

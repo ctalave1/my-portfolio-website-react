@@ -83,7 +83,7 @@ export const Experience = () => {
         {
           title: 'Senior Software Engineer',
           bullets: [
-            'Developed, validated, and debugged front-end (AngularJS 1.x) and backend (Java) code for AlertSite, an API, application, and website monitoring web platform.f customer information, transactions, visits, and merchant product data, while empowering merchants to send targeted marketing campaigns to customers.',
+            'Developed, validated, and debugged front-end (AngularJS 1.x) and backend (Java) code for AlertSite, an API, application, and website monitoring web platform.',
             'Helped found LoadNinja, a leading load testing SaaS web platform, from the ground up. Developed using React (front-end), AWS, and Node.js (back-end) and allows for the visual recording of load testing scripts, without writing code, and running load tests, all using real Chrome browsers.',
             'Developed the functionality (Node.js, Express) of the LoadNinja recorder that allows for the visual recording of load testing scripts, generated as a Mocha script in real-time, by exposing to the end user an active, graphical instance of a headless chrome browser, shown via frames of the browser GUI sent over WebSocket and controlled by Chrome DevTools Protocol to allow for the automation of user actions on the browser, running on an EC2 instance and for the visual replay of the recorder-generated Mocha script.',
             'Developed the logic for correctly and equally distributing load test virtual users across multiple EC2 instances, spun up for a load test using the scripts, regions and proportions specified by the end user, via an AWS Lambda microservice written in Node.js.',
@@ -147,7 +147,7 @@ export const Experience = () => {
                 <h1 className="font-bold mb-2">{d.title}</h1>
                 <ul>
                   {d.bullets.map((bullet, idx) => (
-                    <li className={`${idx === d.bullets.length - 1 ? 'mb-2' : 'mb-1'} ml-4 list-disc`}>{bullet}</li>
+                    <li id={idx.toString()} className={`${idx === d.bullets.length - 1 ? 'mb-2' : 'mb-1'} ml-4 list-disc`}>{bullet}</li>
                   ))}
                 </ul>
               </>
