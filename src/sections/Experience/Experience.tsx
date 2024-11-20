@@ -19,7 +19,8 @@ import {
   SiMicrosoftsqlserver, 
   SiTypescript,
   SiDotnet,
-  SiMicrosoftazure
+  SiMicrosoftazure,
+  SiVisualbasic
 } from "react-icons/si";
 
 import { Section } from "../../components/Section";
@@ -107,7 +108,8 @@ export const Experience = () => {
         <SiCsharp title="C#" />,
         <SiDotnet title=".NET" />,
         <SiMicrosoftsqlserver title="Microsoft SQL Server" />,
-        <SiMicrosoftazure title="Microsoft Azure Cloud" />
+        <SiMicrosoftazure title="Microsoft Azure Cloud" />,
+        <SiVisualbasic title="Visual Basic for Applications" />
       ],
       description: [
         {

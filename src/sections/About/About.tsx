@@ -32,6 +32,10 @@ export const About = () => {
           </p>
 
           <p className="text-base mb-2">
+            I began my foray into professional software development at 16 as an intern for QQSolutions, an insurance agency managment software company that was based in Deerfield Beach, FL. I began working with Microsoft Access Forms and VBA (Visual Basic for Applications). Later, I progressed to working with Angular, C#, and Microsoft SQL Server.
+          </p>
+
+          <p className="text-base mb-2">
           Most recently I led a team of software engineers at Springbig, a loyalty reward and digital marketing software provider, that sells its SaaS platform to retailers.
 
           The team that I led was in charge of integrating the platform with the different POS providers that client merchants use, to better market their products and sales to their customers, while also allowing them to provide loyalty reward programs to them, as well.
@@ -49,20 +53,20 @@ export const About = () => {
 
           <div className="mt-4 flex justify-between text-center">
             <div>
-              <h3 className={`text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-b ${theme.gradientColors}`}>
+              <h3 className={`text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-b ${theme.gradientColors}`}>
                 10
               </h3>
               <p>Years Experience</p>
             </div>
             <div>
-              <h3 className={`text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-b ${theme.gradientColors}`}>
-                7
+              <h3 className={`text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-b ${theme.gradientColors}`}>
+                6
               </h3>
               <p>Projects Completed or Contributed To</p>
             </div>
 
             <div>
-              <h3 className={`text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-b ${theme.gradientColors}`}>
+              <h3 className={`text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-b ${theme.gradientColors}`}>
                 3
               </h3>
               <p>Happy Employers</p>
