@@ -16,11 +16,11 @@ export const About = () => {
       <h2 className="text-4xl font-bold text-center mb-12">
         About Me
       </h2>
-      <div className="flex flex-col md:flex-row items-center md:space-x-12">
+      <div className="flex flex-col lg:flex-row items-center md:space-x-12">
         <img
           src={AboutImage}
           alt="About Me"
-          className="w-72 h-80 rounded object-cover mb-8 md:mb-0"
+          className="w-72 h-80 rounded object-cover mb-8 lg:mb-0"
         />
         <div className="flex-1">
           <p className="text-base mb-2">
@@ -60,7 +60,7 @@ export const About = () => {
             </div>
             <div>
               <h3 className={`text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-b ${theme.gradientColors}`}>
-                6
+                7
               </h3>
               <p>Projects Completed or Contributed To</p>
             </div>
