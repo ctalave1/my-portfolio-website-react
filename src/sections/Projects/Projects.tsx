@@ -56,7 +56,7 @@ export const Projects = () => {
       ],
       image: spaceFlightNewsImage,
       type: 'personal',
-      website: 'https://github.com/ctalave1/space-flight-news-react',
+      website: 'https://space-flight-news-react-vert.vercel.app',
       description: 'An SPA that I worked on to help me brush up on React (Functional Components and React Hooks) and TypeScript. A simple SPA that displays articles fetched from Spaceflight News API. It has search bar functionality and each displayed article is a link that leads you to an article "page" for that article with a short summary.'
     },
     {
@@ -123,7 +123,7 @@ export const Projects = () => {
       ],
       image: qqSolutionsImage,
       type: 'unavailable',
-      website: 'https,//www.linkedin.com/company/qq-solutions-inc/about/',
+      website: 'https://www.linkedin.com/company/qq-solutions-inc/about/',
       description: 'The internal tools site I worked on during my time as an intern at QQSolutions. The internal tools site (built using Angular on the frontend and C# on the backend) was used by product support department. This was not a public facing site, so I have no link for this project. The company no longer exists as its own entity, being acquired by Vertafore in 2015. Instead, I included the link to the QQSolutions LinkedIn profile, as it is still up.'
     },
   ], []);
@@ -153,9 +153,9 @@ export const Projects = () => {
           <Card
             key={project.id}
           >
-            <a href="javascript:void(0);" onClick={() => handleOpenImage(project.image)}>
+            <div className="cursor-pointer" onClick={() => handleOpenImage(project.image)}>
               <img src={project.image} alt="" className="rounded-lg mb-4 w-full h-48 object-fill" />
-            </a>
+            </div>
             <h3 className="text-2xl font-bold mb-2">{project.name}</h3>
             <h2 className="text-gray-400 flex space-x-1 my-4 md:my-2 items-center">
               <span className="font-bold">Technologies Used:</span>

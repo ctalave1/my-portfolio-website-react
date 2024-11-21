@@ -1,14 +1,12 @@
 import axios from 'axios';
 
-const ROOT_API_URL = 'http://localhost:3000';
-
 type FormType = {
   [key: string]: string;
 };
 
 export const sendContactEmail = async ({ name, email, message }: FormType): Promise<void> => {
   try {
-    await axios.post(`${ROOT_API_URL}/mailer`, {
+    await axios.post(`${import.meta.env.VITE_API_BASE_URL}/mailer`, {
       name,
       email,
       message

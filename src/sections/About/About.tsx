@@ -24,31 +24,23 @@ export const About = () => {
         />
         <div className="flex-1">
           <p className="text-base mb-2">
-            Hello! I am a Senior Full-Stack Developer currently residing in Charlotte, North Carolina.
+            I’m a Senior Full-Stack Developer based in Charlotte, North Carolina, with a passion for technology that started at the age of 6, when I first encountered computers through Windows 95 on a Compaq PC. This early curiosity sparked my lifelong journey in software development.
           </p>
 
           <p className="text-base mb-2">
-            I've been interested in computers since I was 6 and I had my first experience with computers using Windows 95 on a Compaq PC.
+            At 16, I began my foray into professional software development as an intern at QQSolutions, an insurance agency management software company that was based in Deerfield Beach, FL. There, I cut my teeth on Microsoft Access Forms and VBA, before expanding my skills into more robust technologies like Angular, C#, and Microsoft SQL Server.
           </p>
 
           <p className="text-base mb-2">
-            I began my foray into professional software development at 16 as an intern for QQSolutions, an insurance agency managment software company that was based in Deerfield Beach, FL. I began working with Microsoft Access Forms and VBA (Visual Basic for Applications). Later, I progressed to working with Angular, C#, and Microsoft SQL Server.
+            Most recently, I had the privilege of leading a talented team of engineers at Springbig, a SaaS provider specializing in loyalty rewards and digital marketing for retailers. I oversaw the integration of our platform with various POS systems, helping merchants deliver targeted marketing campaigns and loyalty rewards to their customers. Additionally, I spearheaded the development of a subscription feature, enabling merchants to offer exclusive rewards and deals through custom subscription plans.
           </p>
 
           <p className="text-base mb-2">
-          Most recently I led a team of software engineers at Springbig, a loyalty reward and digital marketing software provider, that sells its SaaS platform to retailers.
-
-          The team that I led was in charge of integrating the platform with the different POS providers that client merchants use, to better market their products and sales to their customers, while also allowing them to provide loyalty reward programs to them, as well.
-
-          While I was there, I have also oversaw the development of a subscription feature that is sold to merchants, so that they can create subscription plans to which their customers can subscribe to to get exclusive rewards and deals, separate from their loyalty reward program offerings.
+            Before Springbig, I played a pivotal role as a Senior Software Engineer at SmartBear Software, contributing to the development of LoadNinja, a powerful SaaS load testing platform. As a key member of the original development team, I helped shape the product into a vital tool for performance testing.
           </p>
 
           <p className="text-base mb-2">
-            Prior to Springbig, I was involved in full-stack web development as a Senior Software Engineer working on LoadNinja, a load testing platform offered by SmartBear Software, of which I was a key contributor and member of the original development team. 
-          </p>
-
-          <p className="text-base mb-2">
-            I want to be able to help make the lives of other people easier through my contributions, be they small or big, to the field of software development.
+          Throughout my career, my focus has always been on creating meaningful, user-centric solutions that improve efficiency and simplify lives. Whether through small enhancements or large-scale projects, I’m dedicated to driving innovation and delivering value through thoughtful, high-quality software.
           </p>
 
           <div className="mt-4 flex justify-between text-center">

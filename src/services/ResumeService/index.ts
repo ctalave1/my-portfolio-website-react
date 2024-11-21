@@ -1,10 +1,8 @@
 import axios, { AxiosResponse } from 'axios';
 
-const ROOT_API_URL = 'http://localhost:3000';
-
 export const getResume = async (): Promise<void> => {
   try {
-    const resp: AxiosResponse<Blob, Blob> = await axios.get(`${ROOT_API_URL}/resume`, {
+    const resp: AxiosResponse<Blob, Blob> = await axios.get(`${import.meta.env.VITE_API_BASE_URL}/resume`, {
       responseType: 'blob',
     });
 
