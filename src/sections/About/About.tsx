@@ -24,7 +24,7 @@ export const About = () => {
         />
         <div className="flex-1">
           <p className="text-base mb-2">
-            I’m a Senior Full-Stack Developer based in Charlotte, North Carolina, with a passion for technology that started at the age of 6, when I first encountered computers through Windows 95 on a Compaq PC. This early curiosity sparked my lifelong journey in software development.
+            I’m a Senior Full-Stack Developer based in Charlotte, North Carolina, with a passion for technology that started at the age of 6, when I first encountered computers using Windows 95 on a Compaq PC. This early curiosity sparked my lifelong journey in software development.
           </p>
 
           <p className="text-base mb-2">
