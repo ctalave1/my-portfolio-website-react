@@ -20,7 +20,7 @@ export const Footer = () => {
             <a 
               target="_blank" 
               rel="noopener noreferral" 
-              href="https://github.com/ctalave1"
+              href="https://github.com/ctalave1?tab=repositories"
               className="text-gray-400 hover:text-white"
             >
               <FaGithub />
