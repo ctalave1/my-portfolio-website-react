@@ -88,8 +88,8 @@ export const Experience = () => {
             'Helped found LoadNinja, a leading load testing SaaS web platform, from the ground up. Developed using React (front-end), AWS, and Node.js (back-end) and allows for the visual recording of load testing scripts, without writing code, and running load tests, all using real Chrome browsers.',
             'Developed the functionality (Node.js, Express) of the LoadNinja recorder that allows for the visual recording of load testing scripts, generated as a Mocha script in real-time, by exposing to the end user an active, graphical instance of a headless chrome browser, shown via frames of the browser GUI sent over WebSocket and controlled by Chrome DevTools Protocol to allow for the automation of user actions on the browser, running on an EC2 instance and for the visual replay of the recorder-generated Mocha script.',
             'Developed the logic for correctly and equally distributing load test virtual users across multiple EC2 instances, spun up for a load test using the scripts, regions and proportions specified by the end user, via an AWS Lambda microservice written in Node.js.',
-            'Developed AWS Lambda microservice, written in Node.js, that allows for the saving of a recording of a failed load test script iteration using FFMPEG as a layer in the Lambda function to piece together the gathered image frames of the script iteration playback into a single video which is then saved to S3 so that the user may view the video in their load test report, after the load test has completed',
-            'Helped mentor new team members and help them get familiar with the codebase.',
+            'Developed AWS Lambda microservice, written in Node.js, that allows for the saving of a recording of a failed load test script iteration using FFMPEG as a layer in the Lambda function to piece together the gathered image frames of the script iteration playback into a single video which is then saved to S3 so that the user may view the video in their load test report, after the load test has completed.',
+            'Helped mentor new team members and helped them get familiar with the codebase.',
             'Worked with team lead to figure out the feasibility of and architect new features using personal overall knowledge of the LoadNinja platform.',
             'Worked with customer support, and at times directly with customers, to help identify and fix individual or overall platform issues.'
           ]
@@ -115,9 +115,9 @@ export const Experience = () => {
         {
           title: 'Intern Software Developer',
           bullets: [
-            'Developed, validated, and debugged front-end (HTML, CSS, JS [AngularJS 1.X]) and back- end (.NET) code for internal tools website used by Product Support',
-            'Developed, validated, and debugged Windows Form tools written in C#',
-            'Reviewed, analyzed, and modified the VBA source code and layout of Microsoft Access Forms'
+            'Developed, validated, and debugged front-end (HTML, CSS, JS [AngularJS 1.X]) and back- end (.NET) code for internal tools website used by Product Support.',
+            'Developed, validated, and debugged Windows Form tools written in C#.',
+            'Reviewed, analyzed, and modified the VBA source code and layout of Microsoft Access Forms.'
           ]
         }
       ],
