@@ -1,6 +1,6 @@
 # My Portfolio Website React Frontend
 
-This project is the frontend portion of a public-facing website that I created as a type of online resume/portfolio
+This project is the frontend portion of a public-facing website that I developed as a type of online resume/portfolio
 
 [See Project Live](https://christophertalavera.vercel.app/)
 
@@ -42,7 +42,7 @@ npm install
 
 3. Create an `.env.development` file in the root of the directory with these values filled in:
 ```bash
-VITE_API_BASE_URL="{{URL_TO_LOCAL_INSTANCE_OF_EXPRESS_API}}"
+VITE_API_BASE_URL=#URL_TO_LOCAL_INSTANCE_OF_EXPRESS_API
 
 # For example: http://localhost:8000
 ```
