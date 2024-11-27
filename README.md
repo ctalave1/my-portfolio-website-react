@@ -14,7 +14,7 @@ This project is the frontend portion of a public-facing website that I developed
 
 ## Overview
 
-This is a website that acts as an online resume/portfolio for me as a professional software developer, developed using React, TypeScript, and Vite.
+This is a website that acts as an online resume/portfolio for me as a professional software developer, developed using React, TypeScript, and Vite, while also making use of Tailwind CSS to aid in styling the website and helping to make it responsive to different screen sizes.
 
 On the site you can find my current resume, a small blurb about me, my key skills, professional experience, projects that I've contributed to or developed myself, and a contact section with a form for anyone who would like to get in touch with me via the webpage itself.
 
