@@ -27,10 +27,25 @@ import { Section } from "../../components/Section";
 import { Card } from "../../components/Card";
 import { ThemeContext } from "../../contexts/ThemeContext";
 
+type JobDescriptionType = {
+  title: string;
+  bullets: Array<string>;
+};
+
+type EmployerType = {
+  id: number;
+  name: string;
+  image: string;
+  startDate: string;
+  endDate: string;
+  technologies: JSX.Element[];
+  description: JobDescriptionType[];
+};
+
 export const Experience = () => {
   const theme = useContext(ThemeContext);
   
-  const employers = useMemo(() => [
+  const employers: EmployerType[] = useMemo(() => [
     {
       id: 1,
       name: 'Springbig',

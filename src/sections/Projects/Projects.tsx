@@ -30,10 +30,20 @@ import {
   SiMicrosoftazure
 } from "react-icons/si";
 
+type ProjectType = {
+  id: number;
+  name: string;
+  technologies: JSX.Element[];
+  image: string;
+  type: 'personal' | 'professional' | 'unavailable';
+  website: string;
+  description: string;
+}
+
 export const Projects = () => {
   const theme = useContext(ThemeContext);
 
-  const projects = useMemo(() => [
+  const projects: ProjectType[] = useMemo(() => [
     {
       id: 1,
       name: "Online Resume/Portfolio Site",
