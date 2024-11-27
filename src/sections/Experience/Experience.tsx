@@ -40,6 +40,7 @@ type EmployerType = {
   endDate: string;
   technologies: JSX.Element[];
   description: JobDescriptionType[];
+  linkedIn: string;
 };
 
 export const Experience = () => {
