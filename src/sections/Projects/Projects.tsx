@@ -12,6 +12,8 @@ import springbigSubsImage from '../../assets/images/springbig_subs.png';
 import spaceFlightNewsImage from '../../assets/images/spaceflight_news.png';
 import portfolioSiteImage from '../../assets/images/portfolio_site.png';
 
+import { Project } from './types';
+
 import {
   FaVuejs,
   FaAngular,
@@ -30,20 +32,10 @@ import {
   SiMicrosoftazure
 } from "react-icons/si";
 
-type ProjectType = {
-  id: number;
-  name: string;
-  technologies: JSX.Element[];
-  image: string;
-  type: 'personal' | 'professional' | 'unavailable';
-  website: string;
-  description: string;
-}
-
 export const Projects = () => {
   const theme = useContext(ThemeContext);
 
-  const projects: ProjectType[] = useMemo(() => [
+  const projects: Project[] = useMemo(() => [
     {
       id: 1,
       name: "Online Resume/Portfolio Site",

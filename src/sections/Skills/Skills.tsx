@@ -17,10 +17,12 @@ import { ProgressBar } from '../../components/ProgressBar';
 import { ThemeContext } from '../../contexts/ThemeContext';
 import { Section } from '../../components/Section';
 
+import { Skill } from './types';
+
 export const Skills = () => {
   const theme = useContext(ThemeContext);
 
-  const skills = useMemo(() => [
+  const skills: Skill[] = useMemo(() => [
     {
       id: 1,
       title: 'Frontend Development',
