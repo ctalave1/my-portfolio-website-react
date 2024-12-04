@@ -5,6 +5,19 @@ import { Button } from "../Button";
 import { NavBarDropDown } from "./components/NavBarDropDown";
 import { NavBarContext } from "./contexts/NavBarContext";
 
+/**
+ * A function that listens for clicks outside the navigation menu and closes the dropdown if clicked outside.
+ * 
+ * This function listens for `click` and `touchstart` events and checks whether the event target is inside
+ * the dropdown menu. If the click is outside, it sets the dropdown state to `false`, closing the dropdown.
+ * 
+ * @function
+ * @param {boolean} listening - A flag indicating whether the event listeners are active.
+ * @param {Function} setListening - A state setter function to update the `listening` state.
+ * @param {MutableRefObject<HTMLElement>} menuRef - A reference to the navigation menu element.
+ * @param {Function} setIsOpen - A state setter function to control the dropdown's open/closed state.
+ * @returns {Function} The event listener callback to be executed on `click` or `touchstart` events.
+ */
 const listenForOutsideClicks = (listening: boolean, setListening: { (value: SetStateAction<boolean>): void; (arg0: boolean): void; }, menuRef: MutableRefObject<HTMLElement>, setIsOpen: { (value: SetStateAction<boolean>): void; (arg0: boolean): void; }) => {
   return () => {
     if (listening) return;
@@ -19,6 +32,20 @@ const listenForOutsideClicks = (listening: boolean, setListening: { (value: SetS
   }
 };
 
+/**
+ * A functional React component that renders a responsive navigation bar with dropdown functionality.
+ * 
+ * The navigation bar includes links to different sections of the page and a "Contact Me" button. On mobile 
+ * devices, the navigation bar includes a hamburger menu that toggles the visibility of the dropdown links.
+ * The dropdown is closed when the user clicks outside of the menu.
+ * 
+ * @component
+ * @example
+ * // Example usage of the NavBar component:
+ * <NavBar />
+ * 
+ * @returns {JSX.Element} A `nav` element containing navigation links, a contact button, and a mobile dropdown menu.
+ */
 export const NavBar = () => {
   const navRef = useRef(document.createElement('nav'));
   const [listening, setListening] = useState(false);

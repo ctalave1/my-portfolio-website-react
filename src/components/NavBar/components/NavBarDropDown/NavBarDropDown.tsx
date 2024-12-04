@@ -1,5 +1,19 @@
 import { NavBarDropDownItem } from './components/NavBarDropDownItem';
 
+/**
+ * A functional React component that renders the dropdown menu for the navigation bar.
+ * 
+ * The `NavBarDropDown` component includes navigation items such as "Home", "About Me", "Skills", "Projects", 
+ * and "Contact", each wrapped in a `NavBarDropDownItem` component. This dropdown is intended for mobile views
+ * and is displayed when the hamburger menu is clicked.
+ * 
+ * @component
+ * @example
+ * // Example usage of the NavBarDropDown component:
+ * <NavBarDropDown />
+ * 
+ * @returns {JSX.Element} A `div` containing an unordered list with navigation links to different sections of the page.
+ */
 export const NavBarDropDown = () => {
   return (
     <div className="z-50 bg-black py-1 lg:hidden">
