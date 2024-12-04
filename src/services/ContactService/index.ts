@@ -28,7 +28,7 @@ export const contactFormValidator = (name: string, value: string): string => {
       }else if (!value.match(
         /^[A-Za-zÀ-ÿÁ-ÿçÇéèêëîïôöùüñÑ\-'.]+(?:\s+[A-Za-zÀ-ÿÁ-ÿçÇéèêëîïôöùüñÑ\-'.]+)*(\s+(Jr\.|Sr\.|II|III|IV|V|VI|VII|VIII|IX|X|[A-Za-z]+))?$/
       )) {
-        return 'Only latinized names are valid'
+        return 'Only names using the latin alphabet are valid'
       } else {
         return '';
       }
@@ -53,7 +53,7 @@ export const contactFormValidator = (name: string, value: string): string => {
         /^[A-Za-z0-9[.,!?;:'"(){}\[\]<>/\\-_*+=&|~^%$#@ \n]*$/
       )) {
         // eslint-disable-next-line no-useless-escape
-        return `Message may only contain alphanumeric characters, spaces, new lines, and these specific special characters: .,!?;:'"(){}[]<>/\-_*+=&|~^%$#@`;
+        return `Message may only contain alphanumeric characters, spaces, new lines, and these specific special characters: . , ! ? ; : ' " ( ) { } [ ] < > / \- _ * + = & | ~ ^ % $ # @`;
       } else {
         return '';
       }
