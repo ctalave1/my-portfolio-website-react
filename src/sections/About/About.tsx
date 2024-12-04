@@ -5,6 +5,22 @@ import AboutImage from '../../assets/images/about.jpg';
 import { ThemeContext } from '../../contexts/ThemeContext';
 import { Section } from '../../components/Section';
 
+
+/**
+ * The About section of the website that introduces me and outlines my professional background.
+ * 
+ * This component displays the my career journey, including my experience, projects I've worked on personally or contributed to professionally, and 
+ * previous employers. It also showcases some key statistics, such as years of experience, projects completed, and 
+ * number of employers I've worked for, all while utilizing the theme colors from the `ThemeContext`.
+ * 
+ * @function
+ * @example
+ * // Example usage of the About component:
+ * <About />
+ * 
+ * @returns {JSX.Element} The About section UI, including a profile image, personal background, experience summary,
+ * and key statistics.
+ */
 export const About = () => {
   const theme = useContext(ThemeContext);
 

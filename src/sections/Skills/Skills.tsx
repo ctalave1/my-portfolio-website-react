@@ -19,9 +19,23 @@ import { Section } from '../../components/Section';
 
 import { Skill } from './types';
 
+/**
+ * Displays a list of skills, each with the related technologies and progress.
+ * The skills are grouped into categories such as: Frontend Development, Backend Development, and Full-Stack Development.
+ * Each skill category includes a description and a progress bar representing proficiency in each technology.
+ * 
+ * @component
+ * @returns {JSX.Element} The rendered skills section of the portfolio.
+ */
 export const Skills = () => {
   const theme = useContext(ThemeContext);
 
+  /**
+   * List of skills grouped by category.
+   * Each category contains a list of technologies with associated proficiency.
+   *
+   * @type {Skill[]}
+   */
   const skills: Skill[] = useMemo(() => [
     {
       id: 1,

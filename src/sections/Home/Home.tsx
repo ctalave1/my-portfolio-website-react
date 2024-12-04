@@ -9,9 +9,26 @@ import { Section } from '../../components/Section';
 
 import { getResume } from '../../services/ResumeService';
 
+/**
+ * The Home section of the website, providing a brief introduction and a button to fetch and open my resume.
+ * 
+ * This component renders a profile picture, my name, job title, and a short description about the my
+ * expertise. It also includes a button that, when clicked, triggers the fetching and opening of the my resume by invoking
+ * the `getResume` function from the ResumeService. The component also uses the `ThemeContext` to apply the appropriate theme styles.
+ * 
+ * @function
+ * @example
+ * // Example usage of the Home component:
+ * <Home />
+ * 
+ * @returns {JSX.Element} The Home section UI, including profile picture, name, job title, description, and a resume fetching button.
+ */
 export const Home = () => {
   const theme = useContext(ThemeContext);
 
+  /**
+   * Handles clicks on the Resume button.
+   */
   const handleResumeClick = useCallback(async () => {
     try {
       await getResume();

@@ -6,7 +6,7 @@
  * 
  * @typedef {('name' | 'email' | 'message')} FormFields
  */
-type FormFields = 'name' | 'email' | 'message';
+export type FormFields = 'name' | 'email' | 'message';
 
 /**
  * Represents the form data object with specific fields: 'name', 'email', and 'message'.

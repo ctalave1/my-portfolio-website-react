@@ -32,9 +32,23 @@ import {
   SiMicrosoftazure
 } from "react-icons/si";
 
+/**
+ * Displays a list of projects with details such as technologies used, project description,
+ * and links to project pages. Each project is displayed as a card with an option to view images.
+ *
+ * @component
+ * @example
+ * // Render the Projects section
+ * <Projects />
+ */
 export const Projects = () => {
   const theme = useContext(ThemeContext);
-
+  /**
+   * List of projects to display on the page. This is memoized to optimize performance.
+   *
+   * @type {Project[]}
+   * @returns {Project[]} List of Project objects.
+   */
   const projects: Project[] = useMemo(() => [
     {
       id: 1,
@@ -130,6 +144,13 @@ export const Projects = () => {
     },
   ], []);
 
+  /**
+   * Opens an image in a new browser tab when clicked.
+   * This function fetches the image as a blob, creates an object URL, and opens it in a new tab.
+   * 
+   * @param {string} image - The URL of the image to be opened.
+   * @returns {Promise<void>} A promise that resolves once the image is opened.
+   */
   const handleOpenImage = useCallback(async (image: string) => {
     const response: Response = await fetch(image);
 

@@ -29,9 +29,29 @@ import { ThemeContext } from "../../contexts/ThemeContext";
 
 import { Employer } from "./types";
 
+/**
+ * The `Experience` component renders a section that displays professional experience in the form of cards. 
+ * Each card represents a job or internship held at an employer, detailing the name of the company, 
+ * the job title, start and end dates, technologies used, key responsibilities, and a link to the employer's 
+ * LinkedIn profile.
+ * 
+ * @function
+ * @example
+ * // Example usage of the Experience component:
+ * <Experience />
+ * 
+ * @returns {JSX.Element} A section element containing experience cards for each employer.
+ */
 export const Experience = () => {
   const theme = useContext(ThemeContext);
   
+  /**
+   * A list of employers with their respective job details, technologies, descriptions, and LinkedIn URLs. 
+   * Memoized to avoid unnecessary recalculations during re-renders.
+   * 
+   * @type {Employer[]}
+   * @constant
+   */
   const employers: Employer[] = useMemo(() => [
     {
       id: 1,
@@ -50,7 +70,7 @@ export const Experience = () => {
       description: [
         {
           title: 'Software Engineering Manager',
-          bullets: [
+          responsibilities: [
             'Led the integration of our platform with third-party POS providers, enabling seamless cross-communication of customer information, transactions, visits, and merchant product data, while empowering merchants to send targeted marketing campaigns to customers.',
             'Co-architected and managed the development of a subscription service integrated with payment gateway(s), allowing merchants to create paid subscription plans. This service provided customers with exclusive rewards and deals, while generating a new revenue stream through profit-sharing agreements with clients.',
             'Managed the development of a service allowing merchants to offer digital gift cards (through an integration with Birchmount) that a customer can purchase and load using loyalty points or a payment card and use it to make purchases at a merchant\'s store or send it as a gift to a friend. This allows merchant customers more flexibility in how they purchase products at a store, increasing customer retention.',
@@ -59,7 +79,7 @@ export const Experience = () => {
         },
         {
           title: 'Software Engineer',
-          bullets: [
+          responsibilities: [
             'Contributed to a specialized development team tasked with solving complex issues, primarily in AWS and occasionally in Rails backend, that other teams lacked the expertise to address.',
             'Enhanced the company\'s AWS infrastructure by developing and modifying deployment pipelines in AWS CodePipeline, utilizing Node.js and TypeScript, for AWS Lambda, EventBridge, Systems Manager, IAM, and other AWS service resources, leveraging AWS CDK for resource provisioning.',
             'Developed an AWS Lambda function (microservice) triggered by a daily EventBridge rule to import BlueConic CDP customer segments from an S3-hosted CSV file. This data (millions of records) was processed in batches via workers, for targeted marketing campaigns.',
@@ -85,7 +105,7 @@ export const Experience = () => {
       description: [
         {
           title: 'Senior Software Engineer',
-          bullets: [
+          responsibilities: [
             'Developed, validated, and debugged front-end (AngularJS 1.x) and backend (Java) code for AlertSite, an API, application, and website monitoring web platform.',
             'Helped found LoadNinja, a leading load testing SaaS web platform, from the ground up. Developed using React (front-end), AWS, and Node.js (back-end) and allows for the visual recording of load testing scripts, without writing code, and running load tests, all using real Chrome browsers.',
             'Developed the functionality (Node.js, Express) of the LoadNinja recorder that allows for the visual recording of load testing scripts, generated as a Mocha script in real-time, by exposing to the end user an active, graphical instance of a headless chrome browser, shown via frames of the browser GUI sent over WebSocket and controlled by Chrome DevTools Protocol to allow for the automation of user actions on the browser, running on an EC2 instance and for the visual replay of the recorder-generated Mocha script.',
@@ -116,7 +136,7 @@ export const Experience = () => {
       description: [
         {
           title: 'Intern Software Developer',
-          bullets: [
+          responsibilities: [
             'Developed, validated, and debugged front-end (HTML, CSS, JS [AngularJS 1.X]) and back- end (.NET) code for internal tools website used by Product Support.',
             'Developed, validated, and debugged Windows Form tools written in C#.',
             'Reviewed, analyzed, and modified the VBA source code and layout of Microsoft Access Forms.'
@@ -150,8 +170,8 @@ export const Experience = () => {
               <>
                 <h1 className="font-bold mb-2">{d.title}</h1>
                 <ul>
-                  {d.bullets.map((bullet, idx) => (
-                    <li id={idx.toString()} className={`${idx === d.bullets.length - 1 ? 'mb-2' : 'mb-1'} ml-4 list-disc`}>{bullet}</li>
+                  {d.responsibilities.map((bullet, idx) => (
+                    <li id={idx.toString()} className={`${idx === d.responsibilities.length - 1 ? 'mb-2' : 'mb-1'} ml-4 list-disc`}>{bullet}</li>
                   ))}
                 </ul>
               </>

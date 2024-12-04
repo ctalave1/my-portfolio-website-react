@@ -1,5 +1,20 @@
 import { FaGithub, FaLinkedin } from "react-icons/fa6";
 
+/**
+ * The Footer section of the website that contains copyright information and links 
+ * to social media profiles.
+ * 
+ * This component renders the copyright statement and provides clickable social media 
+ * icons that open my LinkedIn and GitHub profiles in a new tab. The layout is responsive 
+ * with flexbox, ensuring the footer adapts to various screen sizes.
+ * 
+ * @function
+ * @example
+ * // Example usage of the Footer component:
+ * <Footer />
+ * 
+ * @returns {JSX.Element} The Footer UI containing the copyright text and social media links.
+ */
 export const Footer = () => {
   return (
     <footer className="text-white py-8">

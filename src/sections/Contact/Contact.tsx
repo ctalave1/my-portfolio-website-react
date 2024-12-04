@@ -1,31 +1,51 @@
 import { useCallback, useContext, useState } from 'react';
 import { FaEnvelope, FaPhone, FaMapLocation } from 'react-icons/fa6';
 import { sendContactEmail, contactFormValidator } from '../../services/ContactService';
-import { FormType, FormErrorType } from './types';
+import { FormType, FormErrorType, FormFields } from './types';
 
 
 import { Button } from '../../components/Button';
 
 import { ThemeContext } from '../../contexts/ThemeContext';
 
+/**
+ * The `Contact` component renders a contact form that allows users to send a message 
+ * by providing their name, email, and a message. It includes form validation and error 
+ * handling. It also displays my contact details and handles form submission 
+ * by validating the data in the form and then sending the message to an Express API
+ * endpoint that handles the sending of messages.
+ * 
+ * @function
+ * @example
+ * // Example usage of the Contact component:
+ * <Contact />
+ * 
+ * @returns {JSX.Element} The Contact section with a form for user inquiries.
+ */
 export const Contact = () => {
   const theme = useContext(ThemeContext);
 
+  // State for form fields
   const [form, setForm] = useState<FormType>({
     name: '',
     email: '',
     message: ''
   });
 
+  // State for form validation errors
   const [formErrors, setFormErrors] = useState<FormErrorType>({
     name: '',
     email: '',
     message: ''
   });
 
-  const [isSending, setIsSending] = useState(false);
-  const [hasSent, setHasSent] = useState(false);
+  const [isSending, setIsSending] = useState(false); // State to track if the form is being sent
+  const [hasSent, setHasSent] = useState(false); // State to show success message after sending
 
+  /**
+   * Handles changes to the name input field.
+   * @param {React.ChangeEvent<HTMLInputElement>} evt - The event triggered on name input change.
+   */
   const handleNameChange = (evt: React.ChangeEvent<HTMLInputElement>) => {
     setForm({      
       ...form,
@@ -33,6 +53,10 @@ export const Contact = () => {
     });
   }
 
+  /**
+   * Handles changes to the email input field.
+   * @param {React.ChangeEvent<HTMLInputElement>} evt - The event triggered on email input change.
+   */
   const handleEmailChange = (evt: React.ChangeEvent<HTMLInputElement>) => {
     setForm({      
       ...form,
@@ -40,6 +64,10 @@ export const Contact = () => {
     });
   }
 
+  /**
+   * Handles changes to the message text area.
+   * @param {React.ChangeEvent<HTMLTextAreaElement>} evt - The event triggered on message input change.
+   */
   const handleMessageChange = (evt: React.ChangeEvent<HTMLTextAreaElement>) => {
     setForm({      
       ...form,
@@ -47,6 +75,12 @@ export const Contact = () => {
     });
   }
 
+  /**
+   * Handles form submission by validating the fields, setting form errors if necessary,
+   * and sending the contact email if the form is valid.
+   * 
+   * @param {React.FormEvent<HTMLFormElement>} evt - The form submission event.
+   */
   const handleSubmitClick = useCallback(async (evt: React.FormEvent<HTMLFormElement>) => {
     evt.preventDefault();
 
@@ -54,7 +88,7 @@ export const Contact = () => {
       ...formErrors
     };
 
-
+    // Validate each field in the form
     Object.keys(form).forEach((field: string) => {
       console.log(JSON.stringify({ field, old_error: formErrors[field as FormFields] }, null, 2));
 
@@ -67,19 +101,23 @@ export const Contact = () => {
 
     console.log(JSON.stringify({ newFormErrors }, null, 2));
 
+    // Update state with new form errors
     setFormErrors({ ...newFormErrors });
 
+    // If there are any errors, stop form submission
     for (const field in newFormErrors) {
       if (!!newFormErrors[field as FormFields] && newFormErrors[field as FormFields].length > 0) {
         return;
       }
     }
 
+    // Set sending state to true while the email is being sent
     setIsSending(true);
   
     try {
       await sendContactEmail(form);
 
+      // Reset form after successful submission
       setForm({
         name: '',
         email: '',
@@ -89,6 +127,8 @@ export const Contact = () => {
       setIsSending(false);
 
       setHasSent(true);
+
+      // Hide the success message after a delay of 1s
       setTimeout(() => {
         setHasSent(false);
       }, 1000);
