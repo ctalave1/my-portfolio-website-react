@@ -1,8 +1,6 @@
 import axios from 'axios';
 
-type FormType = {
-  [key: string]: string;
-};
+import { FormType } from '../../sections/Contact/types';
 
 /**
  * Sends a contact email using a request to my Express API.

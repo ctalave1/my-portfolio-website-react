@@ -1,21 +1,12 @@
 import { useCallback, useContext, useState } from 'react';
 import { FaEnvelope, FaPhone, FaMapLocation } from 'react-icons/fa6';
 import { sendContactEmail, contactFormValidator } from '../../services/ContactService';
+import { FormType, FormErrorType } from './types';
 
 
 import { Button } from '../../components/Button';
 
 import { ThemeContext } from '../../contexts/ThemeContext';
-
-type FormFields = 'name' | 'email' | 'message';
-
-type FormType = {
-  [key in FormFields]: string;
-};
-
-type FormErrorType = {
-  [key in FormFields]: string;
-};
 
 export const Contact = () => {
   const theme = useContext(ThemeContext);
