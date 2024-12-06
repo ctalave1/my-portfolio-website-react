@@ -174,7 +174,7 @@ export const Projects = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {projects.map(project => (
           <Card
-            key={project.id}
+            key={`proj-${project.id}`}
           >
             <div className="cursor-pointer" onClick={() => handleOpenImage(project.image)}>
               <img src={project.image} alt="" className="rounded-lg mb-4 w-full h-48 object-fill" />

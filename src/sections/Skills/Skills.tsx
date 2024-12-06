@@ -132,20 +132,20 @@ export const Skills = () => {
         Skills
       </h2>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {skills.map(service => (
-          <Card key={service.id}>
+        {skills.map(skill => (
+          <Card key={`skill-${skill.id}`}>
             <div className={`text-left text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-b ${theme.gradientColors}`}>
-              {service.id}
+              {skill.id}
             </div>
             <h3 className={`mt-2 text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r ${theme.gradientColors}`}>
-              {service.title}
+              {skill.title}
             </h3>
             <p className="mt-2 mb-6 text-gray-300">
-              {service.description}
+              {skill.description}
             </p>
             <div className="flex flex-col space-y-4">
-            {service.technologies.map(technology => (
-              <div key={technology.id} className="flex items-center">
+            {skill.technologies.map(technology => (
+              <div key={`skill-${skill.id}-tech-${technology.id}`} className="flex items-center">
                 <label htmlFor={technology.htmlId} title={technology.title} className="w-1/10">
                   {technology.label}
                 </label>
