@@ -69,11 +69,12 @@ export const Experience = () => {
       ],
       description: [
         {
-          title: 'Software Engineering Manager',
+          title: 'Software Engineering Manager / Engineer',
           responsibilities: [
-            'Led the integration of our platform with third-party POS providers, enabling seamless cross-communication of customer information, transactions, visits, and merchant product data, while empowering merchants to send targeted marketing campaigns to customers.',
-            'Co-architected and managed the development of a subscription service integrated with payment gateway(s), allowing merchants to create paid subscription plans. This service provided customers with exclusive rewards and deals, while generating a new revenue stream through profit-sharing agreements with clients.',
-            'Managed the development of a service allowing merchants to offer digital gift cards (through an integration with Birchmount) that a customer can purchase and load using loyalty points or a payment card and use it to make purchases at a merchant\'s store or send it as a gift to a friend. This allows merchant customers more flexibility in how they purchase products at a store, increasing customer retention.',
+            'Led the integration of our platform (Vue.js, Tailwind CSS, Rails, AWS Lambda, PostgreSQL) with third-party POS providers, enabling seamless cross-communication of customer information, transactions, visits, and merchant product data, while empowering merchants to send targeted marketing campaigns to customers.',
+            'Co-architected, managed, and helped develop the subscription service (Vue.js, Tailwind CSS, Rails, AWS Lambda, PostgreSQL) that is integrated with payment gateway(s), allowing merchants to create paid subscription plans. This service provided customers with exclusive rewards and deals, while generating a new revenue stream through profit-sharing agreements with clients.',
+            'Managed and helped with the development of a service allowing merchants to offer digital gift cards (through an integration with Birchmount) that a customer can purchase and load using loyalty points or a payment card and use it to make purchases at a merchant’s store or send it as a gift to a friend (Vue.js, Tailwind CSS, Rails, AWS Lambda, PostgreSQL). This allows merchant customers more flexibility in how they purchase products at a store, increasing customer retention.',
+            'Enhanced the bonus loyalty points feature of the platform to allow merchants to set a date range (based on merchant’s saved time zone) for when conditions for loyalty point multipliers/enhancers (Vue.js, Tailwind CSS, Rails, PostgreSQL) take effect. This ends the need for merchants to manually go into their account and disable a condition when it no longer needs to be applied to customer purchases/visits.',
             'Reviewed and approved developers\' PR\'s (Pull Requests), ensuring code quality and adherence to standards. Resolved roadblocks by offering technical insights, collaborating with product teams for clarifications, and coordinating with other team leads to facilitate knowledge sharing.'
           ]
         },
