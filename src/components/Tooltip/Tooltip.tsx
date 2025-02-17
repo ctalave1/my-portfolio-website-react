@@ -9,8 +9,10 @@ export const Tooltip = ({ children, text }: { children: React.ReactNode, text: s
   return (
     <TooltipProvider delayDuration={50}>
       <ShadUiTooltip>
-        <TooltipTrigger>
-          {children}
+        <TooltipTrigger asChild>
+          <div>
+            {children}
+          </div>
         </TooltipTrigger>
         <TooltipContent>
           <p>{text}</p>

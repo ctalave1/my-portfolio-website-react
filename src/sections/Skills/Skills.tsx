@@ -18,6 +18,7 @@ import { ThemeContext } from '../../contexts/ThemeContext';
 import { Section } from '../../components/Section';
 
 import { Skill } from './types';
+import { Tooltip } from '@/components/Tooltip';
 
 /**
  * Displays a list of skills, each with the related technologies and progress.
@@ -146,9 +147,11 @@ export const Skills = () => {
             <div className="flex flex-col space-y-4">
             {skill.technologies.map(technology => (
               <div key={`skill-${skill.id}-tech-${technology.id}`} className="flex items-center">
-                <label htmlFor={technology.htmlId} title={technology.title} className="w-1/10">
-                  {technology.label}
-                </label>
+                <Tooltip text={technology.title}>
+                  <label htmlFor={technology.htmlId} className="w-1/10 hover:text-gray-500">
+                    {technology.label}
+                  </label>
+                </Tooltip>
                 <ProgressBar
                   id={technology.htmlId}
                   progress={technology.progress}
