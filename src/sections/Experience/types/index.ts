@@ -32,7 +32,7 @@ export type Employer = {
   image: string;
   startDate: string;
   endDate: string;
-  technologies: JSX.Element[];
+  technologies: { tooltip:string, element: JSX.Element }[];
   description: JobDescription[];
   linkedIn: string;
 };

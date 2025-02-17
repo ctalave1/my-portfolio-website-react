@@ -120,7 +120,7 @@ export const Projects = () => {
       name: "AlertSite",
       technologies: [
         <FaAngular title="Angular"/>,
-        <FaJava title="Swing"/>
+        <FaJava title="Spring"/>
       ],
       image: alertsiteImage,
       type: 'professional',

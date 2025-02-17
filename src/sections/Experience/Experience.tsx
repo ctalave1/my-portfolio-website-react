@@ -28,6 +28,7 @@ import { Card } from "../../components/Card";
 import { ThemeContext } from "../../contexts/ThemeContext";
 
 import { Employer } from "./types";
+import { Tooltip } from "@/components/Tooltip";
 
 /**
  * The `Experience` component renders a section that displays professional experience in the form of cards. 
@@ -60,12 +61,30 @@ export const Experience = () => {
       startDate: 'Oct 2021',
       endDate: 'Aug 2024',
       technologies: [
-        <FaNodeJs title="Node.js"/>,
-        <SiTypescript title="TypeScript"/>,
-        <FaAws title="Amazon Web Services"/>,
-        <FaVuejs title="VueJS"/>,
-        <SiRubyonrails title="Rails"/>,
-        <SiPostgresql title="PostgreSQL"/>
+        {
+          tooltip: "Node.js",
+          element: <FaNodeJs className="hover:text-gray-100" />
+        },
+        {
+          tooltip: "TypeScript",
+          element: <SiTypescript className="hover:text-gray-100" />
+        },
+        {
+          tooltip: "Amazon Web Services",
+          element: <FaAws className="hover:text-gray-100" />
+        },
+        {
+          tooltip: "VueJS",
+          element: <FaVuejs className="hover:text-gray-100" />
+        },
+        {
+          tooltip: "Rails",
+          element: <SiRubyonrails className="hover:text-gray-100" />
+        },
+        {
+          tooltip: "PostgreSQL",
+          element: <SiPostgresql className="hover:text-gray-100" />
+        }
       ],
       description: [
         {
@@ -97,11 +116,26 @@ export const Experience = () => {
       startDate: 'Mar 2017',
       endDate: 'Sept 2021',
       technologies: [
-        <FaAngular title="Angular"/>,
-        <FaJava title="Swing"/>,
-        <FaReact title="React"/>,
-        <FaNodeJs title="Node.js"/>,
-        <FaAws title="Amazon Web Services"/>
+        {
+          tooltip: "Angular",
+          element: <FaAngular className="hover:text-gray-100" />
+        },
+        {
+          tooltip: "Spring",
+          element: <FaJava className="hover:text-gray-100" />
+        },
+        {
+          tooltip: "React",
+          element: <FaReact className="hover:text-gray-100" />
+        },
+        {
+          tooltip: "Node.js",
+          element: <FaNodeJs className="hover:text-gray-100" />
+        },
+        {
+          tooltip: "Amazon Web Services",
+          element: <FaAws className="hover:text-gray-100" />
+        }       
       ],
       description: [
         {
@@ -127,12 +161,30 @@ export const Experience = () => {
       startDate: 'May 2010',
       endDate: 'Dec 2016',
       technologies: [
-        <FaAngular title="Angular" />,
-        <SiCsharp title="C#" />,
-        <SiDotnet title=".NET" />,
-        <SiMicrosoftsqlserver title="Microsoft SQL Server" />,
-        <SiMicrosoftazure title="Microsoft Azure Cloud" />,
-        <SiVisualbasic title="Visual Basic for Applications" />
+        {
+          tooltip: "Angular",
+          element: <FaAngular className="hover:text-gray-100" />
+        },
+        {
+          tooltip: "C#",
+          element: <SiCsharp className="hover:text-gray-100" />
+        },
+        {
+          tooltip: ".NET",
+          element: <SiDotnet className="hover:text-gray-100" />
+        },
+        {
+          tooltip: "Microsoft SQL Server",
+          element: <SiMicrosoftsqlserver className="hover:text-gray-100" />
+        },
+        {
+          tooltip: "Microsoft Azure Cloud",
+          element: <SiMicrosoftazure className="hover:text-gray-100" />
+        },
+        {
+          tooltip: "Visual Basic for Applications",
+          element: <SiVisualbasic className="hover:text-gray-100" />
+        }
       ],
       description: [
         {
@@ -165,7 +217,11 @@ export const Experience = () => {
             <h3 className="text-2xl font-bold mb-2">{employer.startDate} - {employer.endDate}</h3>
             <h2 className="text-gray-400 flex space-x-1 my-4 md:my-2 items-center">
               <span className="font-bold">Technologies Used:</span>
-              {employer.technologies.map(technology => technology)}
+              {employer.technologies.map((technology) => (
+                <Tooltip text={technology.tooltip}>
+                  {technology.element}
+                </Tooltip>
+              ))}
             </h2>
             {employer.description.map(d => (
               <>
