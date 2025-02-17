@@ -57,15 +57,15 @@ export const Projects = () => {
       technologies: [
         {
           tooltip: "React",
-          element: <FaReact />
+          element: <FaReact className="hover:text-gray-100" />
         },
         {
           tooltip: "TypeScript",
-          element: <SiTypescript />
+          element: <SiTypescript className="hover:text-gray-100" />
         },
         {
           tooltip: "Node.js",
-          element: <FaNodeJs />
+          element: <FaNodeJs className="hover:text-gray-100" />
         }
       ],
       image: portfolioSiteImage,
@@ -79,11 +79,11 @@ export const Projects = () => {
       technologies: [
         {
           tooltip: "React",
-          element: <FaReact />
+          element: <FaReact className="hover:text-gray-100" />
         },
         {
           tooltip: "TypeScript",
-          element: <SiTypescript />
+          element: <SiTypescript className="hover:text-gray-100" />
         }
       ],
       image: spaceFlightNewsImage,
@@ -97,19 +97,19 @@ export const Projects = () => {
       technologies: [
         {
           tooltip: "TypeScript",
-          element: <SiTypescript />
+          element: <SiTypescript className="hover:text-gray-100" />
         },
         {
           tooltip: "VueJS",
-          element: <FaVuejs />
+          element: <FaVuejs className="hover:text-gray-100" />
         },
         {
           tooltip: "Rails",
-          element: <SiRubyonrails />
+          element: <SiRubyonrails className="hover:text-gray-100" />
         },
         {
           tooltip: "PostgreSQL",
-          element: <SiPostgresql />
+          element: <SiPostgresql className="hover:text-gray-100" />
         }
       ],
       image: springbigSubsImage,
@@ -123,15 +123,15 @@ export const Projects = () => {
       technologies: [
         {
           tooltip: "TypeScript",
-          element: <SiTypescript />
+          element: <SiTypescript className="hover:text-gray-100" />
         },
         {
           tooltip: "Node.js",
-          element: <FaNodeJs />
+          element: <FaNodeJs className="hover:text-gray-100" />
         },
         {
           tooltip: "Amazon Web Services",
-          element: <FaAws/>
+          element: <FaAws className="hover:text-gray-100" />
         }
       ],
       image: springbigImage,
@@ -145,15 +145,15 @@ export const Projects = () => {
       technologies: [
         {
           tooltip: "React",
-          element: <FaReact />
+          element: <FaReact className="hover:text-gray-100" />
         },
         {
           tooltip: "Node.js",
-          element: <FaNodeJs />
+          element: <FaNodeJs className="hover:text-gray-100" />
         },
         {
           tooltip: "Amazon Web Services",
-          element: <FaAws />
+          element: <FaAws className="hover:text-gray-100" />
         }
       ],
       image: loadninjaImage,
@@ -167,11 +167,11 @@ export const Projects = () => {
       technologies: [
         {
           tooltip: "Angular",
-          element: <FaAngular />
+          element: <FaAngular className="hover:text-gray-100" />
         },
         {
           tooltip: "Spring",
-          element: <FaJava />
+          element: <FaJava className="hover:text-gray-100" />
         }
       ],
       image: alertsiteImage,
@@ -185,23 +185,23 @@ export const Projects = () => {
       technologies: [
         {
           tooltip: "Angular",
-          element: <FaAngular />
+          element: <FaAngular className="hover:text-gray-100" />
         },
         {
           tooltip: "C#",
-          element: <SiCsharp />
+          element: <SiCsharp className="hover:text-gray-100" />
         },
         {
           tooltip: ".NET",
-          element: <SiDotnet />
+          element: <SiDotnet className="hover:text-gray-100" />
         },
         {
           tooltip: "Microsoft SQL Server",
-          element: <SiMicrosoftsqlserver />
+          element: <SiMicrosoftsqlserver className="hover:text-gray-100" />
         },
         {
           tooltip: "Microsoft Azure Cloud",
-          element: <SiMicrosoftazure />
+          element: <SiMicrosoftazure className="hover:text-gray-100" />
         }
       ],
       image: qqSolutionsImage,
