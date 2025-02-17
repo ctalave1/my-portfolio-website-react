@@ -31,6 +31,7 @@ import {
   SiDotnet,
   SiMicrosoftazure
 } from "react-icons/si";
+import { Tooltip } from '@/components/Tooltip';
 
 /**
  * Displays a list of projects with details such as technologies used, project description,
@@ -54,9 +55,18 @@ export const Projects = () => {
       id: 1,
       name: "Online Resume/Portfolio Site",
       technologies: [
-        <FaReact title="React" />,
-        <SiTypescript title="TypeScript"/>,
-        <FaNodeJs title="Node.js" />
+        {
+          tooltip: "React",
+          element: <FaReact />
+        },
+        {
+          tooltip: "TypeScript",
+          element: <SiTypescript />
+        },
+        {
+          tooltip: "Node.js",
+          element: <FaNodeJs />
+        }
       ],
       image: portfolioSiteImage,
       type: 'personal',
@@ -67,8 +77,14 @@ export const Projects = () => {
       id: 2,
       name: "Space Flight News React",
       technologies: [
-        <FaReact title="React" />,
-        <SiTypescript title="TypeScript"/>
+        {
+          tooltip: "React",
+          element: <FaReact />
+        },
+        {
+          tooltip: "TypeScript",
+          element: <SiTypescript />
+        }
       ],
       image: spaceFlightNewsImage,
       type: 'personal',
@@ -79,10 +95,22 @@ export const Projects = () => {
       id: 3,
       name: "Subscriptions by Springbig",
       technologies: [
-        <SiTypescript title="TypeScript"/>,
-        <FaVuejs title="VueJS"/>,
-        <SiRubyonrails title="Rails"/>,
-        <SiPostgresql title="PostgreSQL"/>
+        {
+          tooltip: "TypeScript",
+          element: <SiTypescript />
+        },
+        {
+          tooltip: "VueJS",
+          element: <FaVuejs />
+        },
+        {
+          tooltip: "Rails",
+          element: <SiRubyonrails />
+        },
+        {
+          tooltip: "PostgreSQL",
+          element: <SiPostgresql />
+        }
       ],
       image: springbigSubsImage,
       type: 'professional',
@@ -93,9 +121,18 @@ export const Projects = () => {
       id: 4,
       name: "Springbig AWS Infrastructure",
       technologies: [
-        <SiTypescript title="TypeScript"/>,
-        <FaNodeJs title="Node.js"/>,
-        <FaAws title="Amazon Web Services"/>
+        {
+          tooltip: "TypeScript",
+          element: <SiTypescript />
+        },
+        {
+          tooltip: "Node.js",
+          element: <FaNodeJs />
+        },
+        {
+          tooltip: "Amazon Web Services",
+          element: <FaAws/>
+        }
       ],
       image: springbigImage,
       type: 'professional',
@@ -106,9 +143,18 @@ export const Projects = () => {
       id: 5,
       name: "LoadNinja",
       technologies: [
-        <FaReact title="React"/>,
-        <FaNodeJs title="Node.js"/>,
-        <FaAws title="Amazon Web Services"/>
+        {
+          tooltip: "React",
+          element: <FaReact />
+        },
+        {
+          tooltip: "Node.js",
+          element: <FaNodeJs />
+        },
+        {
+          tooltip: "Amazon Web Services",
+          element: <FaAws />
+        }
       ],
       image: loadninjaImage,
       type: 'professional',
@@ -119,8 +165,14 @@ export const Projects = () => {
       id: 6,
       name: "AlertSite",
       technologies: [
-        <FaAngular title="Angular"/>,
-        <FaJava title="Spring"/>
+        {
+          tooltip: "Angular",
+          element: <FaAngular />
+        },
+        {
+          tooltip: "Spring",
+          element: <FaJava />
+        }
       ],
       image: alertsiteImage,
       type: 'professional',
@@ -131,11 +183,26 @@ export const Projects = () => {
       id: 7,
       name: "QQSolutions Internal Tools Site",
       technologies: [
-        <FaAngular title="Angular" />,
-        <SiCsharp title="C#" />,
-        <SiDotnet title=".NET" />,
-        <SiMicrosoftsqlserver title="Microsoft SQL Server" />,
-        <SiMicrosoftazure title="Microsoft Azure Cloud" />
+        {
+          tooltip: "Angular",
+          element: <FaAngular />
+        },
+        {
+          tooltip: "C#",
+          element: <SiCsharp />
+        },
+        {
+          tooltip: ".NET",
+          element: <SiDotnet />
+        },
+        {
+          tooltip: "Microsoft SQL Server",
+          element: <SiMicrosoftsqlserver />
+        },
+        {
+          tooltip: "Microsoft Azure Cloud",
+          element: <SiMicrosoftazure />
+        }
       ],
       image: qqSolutionsImage,
       type: 'unavailable',
@@ -182,7 +249,11 @@ export const Projects = () => {
             <h3 className="text-2xl font-bold mb-2">{project.name}</h3>
             <h2 className="text-gray-400 flex space-x-1 my-4 md:my-2 items-center">
               <span className="font-bold">Technologies Used:</span>
-              {project.technologies.map(technology => technology)}
+              {project.technologies.map(technology => (
+                <Tooltip text={technology.tooltip}>
+                  {technology.element}
+                </Tooltip>
+              ))}
             </h2>
             <p className="mb-3">{project.description}</p>
             <a target="_blank" href={project.website} className={`inline-block bg-gradient-to-r ${theme.gradientColors} text-white px-4 py-2 rounded-full`} rel="noopener noreferrer">
