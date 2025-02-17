@@ -90,7 +90,7 @@ export const NavBar = () => {
         />
         <div className="lg:hidden">
           <button onClick={handleMenuClick}>
-            <FaBars className="transform transition-transform duration-300 hover:rotate-180"/>
+            <FaBars data-open={isDropDownOpen} className="transform transition-transform duration-300 data-[open='true']:rotate-180"/>
           </button>
         </div>
       </div>
