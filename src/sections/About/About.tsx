@@ -68,7 +68,7 @@ export const About = () => {
             </div>
             <div>
               <h3 className={`text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-b ${theme.gradientColors}`}>
-                7
+                8
               </h3>
               <p>Projects Completed or Contributed To</p>
             </div>

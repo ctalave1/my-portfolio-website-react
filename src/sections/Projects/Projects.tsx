@@ -11,6 +11,7 @@ import springbigImage from '../../assets/images/springbig.jpeg';
 import springbigSubsImage from '../../assets/images/springbig_subs.png';
 import spaceFlightNewsImage from '../../assets/images/spaceflight_news.png';
 import portfolioSiteImage from '../../assets/images/portfolio_site.png';
+import blogSiteImage from '../../assets/images/cjt-blog.png';
 
 import { Project } from './types';
 
@@ -29,7 +30,9 @@ import {
   SiMicrosoftsqlserver, 
   SiTypescript,
   SiDotnet,
-  SiMicrosoftazure
+  SiMicrosoftazure,
+  SiNextdotjs,
+  SiPrisma
 } from "react-icons/si";
 import { Tooltip } from '@/components/Tooltip';
 
@@ -53,6 +56,32 @@ export const Projects = () => {
   const projects: Project[] = useMemo(() => [
     {
       id: 1,
+      name: "Online Blog Site",
+      technologies: [
+        {
+          tooltip: "React",
+          element: <FaReact className="hover:text-gray-100" />
+        },
+        {
+          tooltip: "TypeScript",
+          element: <SiTypescript className="hover:text-gray-100" />
+        },
+        {
+          tooltip: "Next.js",
+          element: <SiNextdotjs className="hover:text-gray-100" />
+        },
+        {
+          tooltip: "Prisma",
+          element: <SiPrisma className="hover:text-gray-100" />
+        }
+      ],
+      image: blogSiteImage,
+      type: 'personal',
+      website: 'https://cjt-blog.vercel.app/',
+      description: 'A blog style website I made to continue my practice with React and Typescript and to begin familiarizing myself with Next.js. Built using Next.js\'s App Router and Prisma for storing information on user interactions with blog posts to see which are the most popular.'
+    },
+    {
+      id: 2,
       name: "Online Resume/Portfolio Site",
       technologies: [
         {
@@ -66,15 +95,15 @@ export const Projects = () => {
         {
           tooltip: "Node.js",
           element: <FaNodeJs className="hover:text-gray-100" />
-        }
+        },
       ],
       image: portfolioSiteImage,
       type: 'personal',
-      website: '/',
+      website: '',
       description: 'This website you\'re on right now! An online resume/ portfolio website I made to continue brushing up on my React, Typescript, Express, and Node.js skills as well as to showcase my ability as a developer to anyone who may visit the site.'
     },
     {
-      id: 2,
+      id: 3,
       name: "Space Flight News React",
       technologies: [
         {
@@ -92,7 +121,7 @@ export const Projects = () => {
       description: 'An SPA that I worked on to help me brush up on React (Functional Components and React Hooks) and TypeScript. A simple SPA that displays articles fetched from Spaceflight News API. It has search bar functionality and each displayed article is a link that leads you to an article "page" for that article with a short summary.'
     },
     {
-      id: 3,
+      id: 4,
       name: "Subscriptions by Springbig",
       technologies: [
         {
@@ -118,7 +147,7 @@ export const Projects = () => {
       description: 'A feature of the Springbig platform that I co-architected and oversaw the development for. A feature that is sold to Springbig client retailers that allows them to create subscription plans that offer VIP rewards and offers to their customer outside of the rewards and offers that they receive from retailers\' loyatly reward programs (also a Springbig feature).'
     },
     {
-      id: 4,
+      id: 5,
       name: "Springbig AWS Infrastructure",
       technologies: [
         {
@@ -140,7 +169,7 @@ export const Projects = () => {
       description: 'One of the main responsibilities of the first team I was placed on when I first started at Springbig. While I also occasionally worked on tasks involing Rails development and AWS Lambda development, the main responsibility of the team was to develop Node.js scripts that leveraged AWS CDK to create new and modify existing deployment pipelines in AWS CodePipeline that provisioned AWS resources across multiple development environments.'
     },
     {
-      id: 5,
+      id: 6,
       name: "LoadNinja",
       technologies: [
         {
@@ -162,7 +191,7 @@ export const Projects = () => {
       description: 'SmartBear\'s first product to be developed in-house, of which I was a key contributor. A SaaS load testing platform for web apps/sites and APIs. Allows you to codelessly generate web apps/sites or API load testing scripts using the InstaPlay recorder. Use those scripts in a load test that plays back those scripts on real-time Chrome browser instances and get actionable insights via navigation timings, response times, and network data.'
     },
     {
-      id: 6,
+      id: 7,
       name: "AlertSite",
       technologies: [
         {
@@ -180,7 +209,7 @@ export const Projects = () => {
       description: 'The first project that I contributed to at SmartBear. An API, application, and website monitoring platform. Allows clients to create monitors for your applications and APIs and view alerts and metrics when availability, performance, and functionality begin to have problems.'
     },
     {
-      id: 7,
+      id: 8,
       name: "QQSolutions Internal Tools Site",
       technologies: [
         {
